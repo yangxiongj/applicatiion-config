@@ -10,7 +10,8 @@ eureka:
         lease-renewal-interval-in-seconds: 10 #Eureka服务器在接收到实例得最后一次发出得心跳后，需要等待多久才可以将此实例删除，默认90秒
 spring:
     application:
-        profiles: dev
+        profiles:
+            active: dev
         name: consumer
 ---
 server:
@@ -25,7 +26,8 @@ eureka:
         lease-renewal-interval-in-seconds: 10 #Eureka服务器在接收到实例得最后一次发出得心跳后，需要等待多久才可以将此实例删除，默认90秒
 spring:
     application:
-        profiles: prod
+        profiles:
+            active: prod
         name: consumer
 ---
 server:
@@ -40,5 +42,6 @@ eureka:
         lease-renewal-interval-in-seconds: 10 #Eureka服务器在接收到实例得最后一次发出得心跳后，需要等待多久才可以将此实例删除，默认90秒
 spring:
     application:
-        profiles: test
+        profiles:
+            active: test
         name: consumer
